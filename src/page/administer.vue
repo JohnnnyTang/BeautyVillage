@@ -1,10 +1,13 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="statTab-container">
-    <div><h1 class="h1style">扎根基层赋能特色治理</h1></div>
+    <div>
+      <h1 class="h1style">扎根基层赋能特色治理</h1>
+    </div>
     <div class="interviewVideo_main" id="videoContainer" v-loading="loading">
       <!--此处根据pdf的页数动态生成相应数量的canvas画布-->
-      <canvas v-for="pageIndex in pdfPages" :id="`pdf-canvas-` + pageIndex" :key="pageIndex" style="display: block"></canvas>
+      <canvas v-for="pageIndex in pdfPages" :id="`pdf-canvas-` + pageIndex" :key="pageIndex"
+        style="display: block"></canvas>
     </div>
   </div>
 </template>
@@ -83,10 +86,12 @@ div.statTab-container {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .interviewVideo_main {
   height: 760px;
   overflow-y: auto;
 }
+
 .h1style {
   font-family: 宋体;
   color: #000;

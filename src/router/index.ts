@@ -1,6 +1,7 @@
 //从下载的vue-router中导入createRouter
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory, createWebHashHistory } from "vue-router"
 import statTab from '../components/StatTab.vue';
+import visitCountyTab from '../components/visitCountyTab.vue';
 import administer from '../page/administer.vue';
 import culture from '../page/culture.vue';
 import industry from '../page/industry.vue';
@@ -25,6 +26,34 @@ const routes = [
         path: "/stat",
         name: "statTab",
         component: statTab,
+        meta: {
+            keepAlive: true
+        },
+    },
+    {
+        path: "/potential",
+        name: "potentialPage",
+        component: () => import('../components/targetSystem/potentialPage.vue')
+    },
+    {
+        path: "/effect",
+        name: "effectPage",
+        component: () => import('../components/targetSystem/effectPage.vue')
+    },
+    {
+        path: "/target",
+        name: "targetPage",
+        component: () => import('../components/targetSystem/targetPage.vue')
+    },
+    {
+        path: "/scoreTable",
+        name: "scoreTable",
+        component: () => import('../components/targetSystem/scoreTable.vue')
+    },
+    {
+        path: "/visited/:countyName",
+        name: "visitCountyTab",
+        component: visitCountyTab
     },
     {
         path: "/industry",

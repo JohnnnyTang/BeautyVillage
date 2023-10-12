@@ -28,10 +28,9 @@
           <!-- <div class="menu-item-icon one"></div> -->
           <span class="menu-item-text">指标说明</span>
         </el-menu-item>
-        <el-menu-item index="2-4" @click="routeStat">
-          <!-- <div class="menu-item-icon one"></div> -->
+        <!-- <el-menu-item index="2-4" @click="routeStat">
           <span class="menu-item-text">打分表</span>
-        </el-menu-item>
+        </el-menu-item> -->
       </el-sub-menu>
       <el-sub-menu index="3">
         <template #title>
@@ -61,38 +60,76 @@
       </el-menu-item>
     </el-menu>
   </div>
-  <!-- <div class="tab-container">
-
-  </div> -->
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <KeepAlive>
+      <component :is="Component" v-if="route.meta.keepAlive"></component>
+    </KeepAlive>
+    <component :is="Component" v-if="!route.meta.keepAlive"></component>
+  </router-view>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { computed, ref } from 'vue';
+import router from '@/router';
 
-const router = useRouter()
-
-const routeStat = () => {
-  router.push('industry')
+const routeStat = (e:any) => {
+  const routerIndex = e.index
+  if(routerIndex == '2-1'){
+    router.push('/potential')
+  }
+  else if(routerIndex == '2-2'){
+    router.push('/effect')
+  }
+  else if(routerIndex == '2-3'){
+    router.push('/target')
+  }
+  else if(routerIndex == '2-4'){
+    router.push('/scoreTable')
+  }
+  else{
+    router.push('/stat')
+  }
 }
 const routeIndustry = () => {
-  router.push('industry')
+  router.push('/industry')
 }
 const routeNature = () => {
-  router.push('nature')
+  router.push('/nature')
 }
 const routeCulture = () => {
-  router.push('culture')
+  router.push('/culture')
 }
 const routeAdminister = () => {
-  router.push('administer')
+  router.push('/administer')
 }
 const routePassword = () => {
-  router.push('password')
+  router.push('/password')
 }
+//解决ResizeObserver loop completed with undelivered notifications
+const debounce = (callback: (...args: any[]) => void, delay: number) => {
+    let tid: any;
+    return function (...args: any[]) {
+      const ctx = self;
+      tid && clearTimeout(tid);
+      tid = setTimeout(() => {
+        callback.apply(ctx, args);
+      }, delay);
+    };
+  };
 
-const defaultOpen = ref(['2', '3'])
+const _ = (window as any).ResizeObserver;
+(window as any).ResizeObserver = class ResizeObserver extends _ {
+  constructor(callback: (...args: any[]) => void) {
+    callback = debounce(callback, 20);
+    super(callback);
+  }
+};
+const route = computed(() => {
+  return router.currentRoute.value;
+});
+
+const defaultOpen = ref(['2', '3']);
+
 </script>
 
 <style lang="scss">
@@ -128,7 +165,10 @@ div.header {
     width: fit-content;
     font-family: 'STZhongsong';
     font-weight: 600;
-    background-image: linear-gradient(25deg, #fdfffc 0%, #a7ecc6 40%, #38eb83 100%);
+    background-image: linear-gradient(25deg,
+        #fdfffc 0%,
+        #a7ecc6 40%,
+        #38eb83 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -139,7 +179,10 @@ div.header {
     width: fit-content;
     font-weight: 600;
     // color: rgba($color: #ecffe8, $alpha: .8);
-    background-image: linear-gradient(25deg, #fdfffc 0%, #d8f5e5 40%, #abe3c2 100%);
+    background-image: linear-gradient(25deg,
+        #fdfffc 0%,
+        #d8f5e5 40%,
+        #abe3c2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -150,7 +193,10 @@ div.header {
     width: fit-content;
     font-weight: 400;
     // color: rgba($color: #ecffe8, $alpha: .8);
-    background-image: linear-gradient(25deg, #fdfffc 0%, #eefff5 40%, #d1ffce 100%);
+    background-image: linear-gradient(25deg,
+        #fdfffc 0%,
+        #eefff5 40%,
+        #d1ffce 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -172,7 +218,9 @@ div.verticle-nav {
   height: 92vh;
   width: 12vw;
   // background-color: bisque;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%),
+  background-image: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%),
     // url('./assets/green-field-clipped.jpg');
     url('./assets/rice-field-vertical.jpg');
   // background-image: url('./assets/green-field-clipped.jpg');
@@ -245,17 +293,21 @@ div.verticle-nav {
     transition: all ease-in-out 0.2s;
     border-radius: 6px;
     color: #ffff;
+
     div.el-sub-menu__title {
       color: #ffff;
+
       &:hover {
         background-color: #00531e8b;
       }
     }
+
     div.menu-item-icon {
       height: 2.4vh;
       width: 2.4vh;
       transition: all ease-in-out 0.2s;
     }
+
     &.is-active {
       div.menu-item-icon {
         height: 2.8vh;
@@ -267,6 +319,7 @@ div.verticle-nav {
     &:hover {
       background-color: #00531e8b;
     }
+
     // border-radius: 6px;
     // border-style: solid;
     // border-width: 1px;
@@ -279,6 +332,7 @@ div.verticle-nav {
     transition: all ease-in-out 0.2s;
     border-radius: 6px;
     color: #ffff;
+
     // border-style: solid;
     // border-width: 1px;
     // border-color: #d8f5ff;
@@ -289,16 +343,21 @@ div.verticle-nav {
     }
 
     &.is-active {
-      background-image: linear-gradient(45deg, rgb(221, 255, 220) 0%, rgb(170, 255, 169) 30%, rgb(17, 249, 87) 100%);
+      background-image: linear-gradient(45deg,
+          rgb(221, 255, 220) 0%,
+          rgb(170, 255, 169) 30%,
+          rgb(17, 249, 87) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: rgb(0, 58, 158);
       border-style: outset;
       border-width: 3px;
+
       span.menu-item-text {
         font-size: calc(0.5vh + 1vw);
         transition: all ease-in-out 0.2s;
       }
+
       transition: all ease-in-out 0.2s;
       // border-color: #a1e6ff;
 
@@ -326,5 +385,4 @@ div.tab-container {
   width: 88vw;
   height: 92vh;
   background-color: blue;
-}
-</style>
+}</style>
