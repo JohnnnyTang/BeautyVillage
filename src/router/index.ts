@@ -1,6 +1,7 @@
 //从下载的vue-router中导入createRouter
 import { createRouter, createWebHistory, createWebHashHistory } from "vue-router"
 import statTab from '../components/StatTab.vue';
+import visitCountyTab from '../components/visitCountyTab.vue';
 // import About from "@/components/About.vue"
 //配置映射关系
 const routes = [
@@ -13,7 +14,15 @@ const routes = [
     {
         path: "/stat",
         name: "statTab",
+        meta: {
+            keepAlive: true
+        },
         component: statTab
+    },
+    {
+        path: "/visited/:countyName",
+        name: "visitCountyTab",
+        component: visitCountyTab
     },
 ]
 

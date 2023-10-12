@@ -61,21 +61,25 @@
       </el-menu-item>
     </el-menu>
   </div>
-  <!-- <div class="tab-container">
-
-  </div> -->
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <KeepAlive>
+      <component :is="Component" v-if="route.meta.keepAlive"></component>
+    </KeepAlive>
+    <component :is="Component" v-if="!route.meta.keepAlive"></component>
+  </router-view>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
+import { computed, ref } from 'vue';
+import router from '@/router';
 
 const routeStat = () => {
   router.push('/stat')
 }
+
+const route = computed(() => {
+  return router.currentRoute.value;
+});
 
 const defaultOpen = ref(['2', '3']);
 
@@ -167,16 +171,14 @@ div.verticle-nav {
   height: 92vh;
   width: 12vw;
   // background-color: bisque;
-  background-image: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.1) 0%,
-        rgba(255, 255, 255, 0.1) 100%
-      ),
-      // url('./assets/green-field-clipped.jpg');
-      url('./assets/rice-field-vertical.jpg');
+  background-image: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%),
+    // url('./assets/green-field-clipped.jpg');
+    url('./assets/rice-field-vertical.jpg');
   // background-image: url('./assets/green-field-clipped.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
   left: 0;
   top: 8vh;
   padding: 0;
@@ -244,17 +246,21 @@ div.verticle-nav {
     transition: all ease-in-out 0.2s;
     border-radius: 6px;
     color: #ffff;
+
     div.el-sub-menu__title {
       color: #ffff;
+
       &:hover {
         background-color: #00531e8b;
       }
     }
+
     div.menu-item-icon {
       height: 2.4vh;
       width: 2.4vh;
       transition: all ease-in-out 0.2s;
     }
+
     &.is-active {
       div.menu-item-icon {
         height: 2.8vh;
@@ -266,6 +272,7 @@ div.verticle-nav {
     &:hover {
       background-color: #00531e8b;
     }
+
     // border-radius: 6px;
     // border-style: solid;
     // border-width: 1px;
@@ -278,6 +285,7 @@ div.verticle-nav {
     transition: all ease-in-out 0.2s;
     border-radius: 6px;
     color: #ffff;
+
     // border-style: solid;
     // border-width: 1px;
     // border-color: #d8f5ff;
@@ -289,18 +297,20 @@ div.verticle-nav {
 
     &.is-active {
       background-image: linear-gradient(45deg,
-        rgb(221, 255, 220) 0%,
-        rgb(170, 255, 169) 30%,
-        rgb(17, 249, 87) 100%);
+          rgb(221, 255, 220) 0%,
+          rgb(170, 255, 169) 30%,
+          rgb(17, 249, 87) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: rgb(0, 58, 158);
       border-style: outset;
       border-width: 3px;
+
       span.menu-item-text {
         font-size: calc(0.5vh + 1vw);
         transition: all ease-in-out 0.2s;
       }
+
       transition: all ease-in-out 0.2s;
       // border-color: #a1e6ff;
 
@@ -328,5 +338,4 @@ div.tab-container {
   width: 88vw;
   height: 92vh;
   background-color: blue;
-}
-</style>
+}</style>
