@@ -28,10 +28,9 @@
           <!-- <div class="menu-item-icon one"></div> -->
           <span class="menu-item-text">指标说明</span>
         </el-menu-item>
-        <el-menu-item index="2-4" @click="routeStat">
-          <!-- <div class="menu-item-icon one"></div> -->
+        <!-- <el-menu-item index="2-4" @click="routeStat">
           <span class="menu-item-text">打分表</span>
-        </el-menu-item>
+        </el-menu-item> -->
       </el-sub-menu>
       <el-sub-menu index="3">
         <template #title>

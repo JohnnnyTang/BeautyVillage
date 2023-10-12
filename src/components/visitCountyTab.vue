@@ -80,10 +80,10 @@ const scoreTypeMap = {
     "文化传承": ["独特性", "历史古迹完整性", "传承与发展", "类型与数量"],
 }
 
-const photoPrefix = "http://192.168.1.101:8080//"
+const photoPrefix = "http://192.168.1.111:8080//"
 
 let carouselInfo = ref([
-    { id: 0, imgSrc: 'http://192.168.1.101:8080//farmer-blur-text.jpg' },
+    { id: 0, imgSrc: 'http://192.168.1.111:8080//farmer-blur-text.jpg' },
 ])
 
 function buildCarouselInfo() {

@@ -1301,7 +1301,7 @@ onMounted(() => {
 })
 </script>
   
-<style lang="scss" scoped>
+<style lang="scss">
 div.statTab-container {
     position: absolute;
     left: 12vw;
