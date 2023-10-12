@@ -73,7 +73,7 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-const routeStat = (e) => {
+const routeStat = (e:any) => {
   const routerIndex = e.index
   if(routerIndex == '2-1'){
     router.push('/potential')
@@ -90,7 +90,6 @@ const routeStat = (e) => {
   else{
     router.push('/stat')
   }
-
 }
 //解决ResizeObserver loop completed with undelivered notifications
 const debounce = (callback: (...args: any[]) => void, delay: number) => {

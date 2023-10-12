@@ -14,28 +14,26 @@ const routes = [
         path: "/stat",
         name: "statTab",
         component: statTab,
-        children:[
-            {
-                path: "/potential",
-                name: "potentialPage",
-                component: () => import('../components/targetSystem/potentialPage.vue')
-            },
-            {
-                path: "/effect",
-                name: "effectPage",
-                component: () => import('../components/targetSystem/effectPage.vue')
-            },
-            {
-                path: "/target",
-                name: "targetPage",
-                component: () => import('../components/targetSystem/targetPage.vue')
-            },
-            {
-                path: "/scoreTable",
-                name: "scoreTable",
-                component: () => import('../components/targetSystem/scoreTable.vue')
-            },
-        ]
+    },
+    {
+        path: "/potential",
+        name: "potentialPage",
+        component: () => import('../components/targetSystem/potentialPage.vue')
+    },
+    {
+        path: "/effect",
+        name: "effectPage",
+        component: () => import('../components/targetSystem/effectPage.vue')
+    },
+    {
+        path: "/target",
+        name: "targetPage",
+        component: () => import('../components/targetSystem/targetPage.vue')
+    },
+    {
+        path: "/scoreTable",
+        name: "scoreTable",
+        component: () => import('../components/targetSystem/scoreTable.vue')
     },
 
 ]

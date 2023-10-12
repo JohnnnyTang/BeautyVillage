@@ -1,155 +1,159 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="container">
-      <div class="leftContainer" style="width:51%;height:88vh;overflow-y: auto;">
-        <div class="title">权重矩阵</div>
-        <el-row>
-          <el-col :span="12">
-            <el-table :data="juzhen1_1" style="width: 100%">
-              <el-table-column prop="A1" label="A1" />
-              <el-table-column prop="B1" label="B1" />
-              <el-table-column prop="B2" label="B2" />
-              <el-table-column prop="B3" label="B3" />
-            </el-table>
-          </el-col>
-          <el-col :span="12">
-            <el-table :data="juzhen1_2" style="width: 100%">
-              <el-table-column prop="B1" label="B1" />
-              <el-table-column prop="C1" label="C1" />
-              <el-table-column prop="C2" label="C2" />
-            </el-table>
-          </el-col>
-          <el-col :span="12">
-            <el-table :data="juzhen1_3" style="width: 100%">
-              <el-table-column prop="B2" label="B2" />
-              <el-table-column prop="C3" label="C3" />
-              <el-table-column prop="C4" label="C4" />
-              <el-table-column prop="C5" label="C5" />
-            </el-table>
-          </el-col>
-          <el-col :span="12">
-            <el-table :data="juzhen1_4" style="width: 100%">
-              <el-table-column prop="B3" label="B3" />
-              <el-table-column prop="C6" label="C6" />
-              <el-table-column prop="C7" label="C7" />
-              <el-table-column prop="C8" label="C8" />
-            </el-table>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="12">
-            <el-table :data="juzhen2_1" style="width: 100%">
-              <el-table-column prop="A2" label="A2" />
-              <el-table-column prop="B4" label="B4" />
-              <el-table-column prop="B5" label="B5" />
-              <el-table-column prop="B6" label="B6" />
-            </el-table>
-          </el-col>
-          <el-col :span="12">
-            <el-table :data="juzhen2_2" style="width: 100%">
-              <el-table-column prop="B4" label="B4" />
-              <el-table-column prop="C9" label="C9" />
-              <el-table-column prop="C10" label="C10" />
-            </el-table>
-          </el-col>
-          <el-col :span="12">
-            <el-table :data="juzhen2_3" style="width: 100%">
-              <el-table-column prop="B5" label="B5" />
-              <el-table-column prop="C11" label="C11" />
-              <el-table-column prop="C12" label="C12" />
-              <el-table-column prop="C13" label="C13" />
-            </el-table>
-          </el-col>
-          <el-col :span="20">
-            <el-table :data="juzhen2_4" style="width: 100%">
-              <el-table-column prop="B6" label="B6" />
-              <el-table-column prop="C14" label="C14" />
-              <el-table-column prop="C15" label="C15" />
-              <el-table-column prop="C16" label="C16" />
-              <el-table-column prop="C17" label="C17" />
-              <el-table-column prop="C18" label="C18" />
-              <el-table-column prop="C19" label="C19" />
-            </el-table>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="12">
-            <el-table :data="juzhen3_1" style="width: 100%">
-              <el-table-column prop="A3" label="A3" />
-              <el-table-column prop="B7" label="B7" />
-              <el-table-column prop="B8" label="B8" />
-              <el-table-column prop="B9" label="B9" />
-            </el-table>
-          </el-col>
-          <el-col :span="12">
-            <el-table :data="juzhen3_2" style="width: 100%">
-              <el-table-column prop="B7" label="B7" />
-              <el-table-column prop="C20" label="C20" />
-              <el-table-column prop="C21" label="C21" />
-              <el-table-column prop="C22" label="C22" />
-            </el-table>
-          </el-col>
-          <el-col :span="12">
-            <el-table :data="juzhen3_3" style="width: 100%">
-              <el-table-column prop="B8" label="B8" />
-              <el-table-column prop="C23" label="C23" />
-              <el-table-column prop="C24" label="C24" />
-              <el-table-column prop="C25" label="C25" />
-            </el-table>
-          </el-col>
-          <el-col :span="10">
-            <el-table :data="juzhen3_4" style="width: 100%">
-              <el-table-column prop="B9" label="B9" />
-              <el-table-column prop="C26" label="C26" />
-              <el-table-column prop="C27" label="C27" />
-            </el-table>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="12">
-            <el-table :data="juzhen4_1" style="width: 100%">
-              <el-table-column prop="A4" label="A4" />
-              <el-table-column prop="B10" label="B10" />
-              <el-table-column prop="B11" label="B11" />
-              <el-table-column prop="B12" label="B12" />
-            </el-table>
-          </el-col>
-          <el-col :span="12">
-            <el-table :data="juzhen4_2" style="width: 100%">
-              <el-table-column prop="B10" label="B10" />
-              <el-table-column prop="C28" label="C28" />
-              <el-table-column prop="C29" label="C29" />
-            </el-table>
-          </el-col>
-          <el-col :span="12">
-            <el-table :data="juzhen4_3" style="width: 100%">
-              <el-table-column prop="B11" label="B11" />
-              <el-table-column prop="C30" label="C30" />
-              <el-table-column prop="C31" label="C31" />
-            </el-table>
-          </el-col>
-          <el-col :span="12">
-            <el-table :data="juzhen4_4" style="width: 100%">
-              <el-table-column prop="B12" label="B12" />
-              <el-table-column prop="C32" label="C32" />
-              <el-table-column prop="C33" label="C33" />
-            </el-table>
-          </el-col>
-        </el-row>
-      </div>
-      <div style="width:50%;margin-left:2%;height:88vh">
-        <div class="title">村庄发展潜能评价表</div>
-        <div class="table">
-          <el-table :data="tableData" :span-method="objectSpanMethod" border class="eleTable" max-height="600" style="width: 85%">
-            <el-table-column prop="decisionAims" label="决策目标" width="150"> </el-table-column>
-            <el-table-column prop="criterionLayer1" label="准则层1" width="130"> </el-table-column>
-            <el-table-column prop="weight1" label="权重"> </el-table-column>
-            <el-table-column prop="criterionLayer2" label="准则层2"> </el-table-column>
-            <el-table-column prop="weight2" label="权重"> </el-table-column>
-          </el-table>
+    <div class="statTab-container"></div>
+    <div class="main-container">
+      <div class="container">
+        <div class="leftContainer" style="width:51%;height:88vh;overflow-y: auto;">
+          <div class="title">权重矩阵</div>
+          <el-row>
+            <el-col :span="12">
+              <el-table :data="juzhen1_1" style="width: 100%">
+                <el-table-column prop="A1" label="A1" />
+                <el-table-column prop="B1" label="B1" />
+                <el-table-column prop="B2" label="B2" />
+                <el-table-column prop="B3" label="B3" />
+              </el-table>
+            </el-col>
+            <el-col :span="12">
+              <el-table :data="juzhen1_2" style="width: 100%">
+                <el-table-column prop="B1" label="B1" />
+                <el-table-column prop="C1" label="C1" />
+                <el-table-column prop="C2" label="C2" />
+              </el-table>
+            </el-col>
+            <el-col :span="12">
+              <el-table :data="juzhen1_3" style="width: 100%">
+                <el-table-column prop="B2" label="B2" />
+                <el-table-column prop="C3" label="C3" />
+                <el-table-column prop="C4" label="C4" />
+                <el-table-column prop="C5" label="C5" />
+              </el-table>
+            </el-col>
+            <el-col :span="12">
+              <el-table :data="juzhen1_4" style="width: 100%">
+                <el-table-column prop="B3" label="B3" />
+                <el-table-column prop="C6" label="C6" />
+                <el-table-column prop="C7" label="C7" />
+                <el-table-column prop="C8" label="C8" />
+              </el-table>
+            </el-col>
+          </el-row>
+          <el-row>
+            <el-col :span="12">
+              <el-table :data="juzhen2_1" style="width: 100%">
+                <el-table-column prop="A2" label="A2" />
+                <el-table-column prop="B4" label="B4" />
+                <el-table-column prop="B5" label="B5" />
+                <el-table-column prop="B6" label="B6" />
+              </el-table>
+            </el-col>
+            <el-col :span="12">
+              <el-table :data="juzhen2_2" style="width: 100%">
+                <el-table-column prop="B4" label="B4" />
+                <el-table-column prop="C9" label="C9" />
+                <el-table-column prop="C10" label="C10" />
+              </el-table>
+            </el-col>
+            <el-col :span="12">
+              <el-table :data="juzhen2_3" style="width: 100%">
+                <el-table-column prop="B5" label="B5" />
+                <el-table-column prop="C11" label="C11" />
+                <el-table-column prop="C12" label="C12" />
+                <el-table-column prop="C13" label="C13" />
+              </el-table>
+            </el-col>
+            <el-col :span="20">
+              <el-table :data="juzhen2_4" style="width: 100%">
+                <el-table-column prop="B6" label="B6" />
+                <el-table-column prop="C14" label="C14" />
+                <el-table-column prop="C15" label="C15" />
+                <el-table-column prop="C16" label="C16" />
+                <el-table-column prop="C17" label="C17" />
+                <el-table-column prop="C18" label="C18" />
+                <el-table-column prop="C19" label="C19" />
+              </el-table>
+            </el-col>
+          </el-row>
+          <el-row>
+            <el-col :span="12">
+              <el-table :data="juzhen3_1" style="width: 100%">
+                <el-table-column prop="A3" label="A3" />
+                <el-table-column prop="B7" label="B7" />
+                <el-table-column prop="B8" label="B8" />
+                <el-table-column prop="B9" label="B9" />
+              </el-table>
+            </el-col>
+            <el-col :span="12">
+              <el-table :data="juzhen3_2" style="width: 100%">
+                <el-table-column prop="B7" label="B7" />
+                <el-table-column prop="C20" label="C20" />
+                <el-table-column prop="C21" label="C21" />
+                <el-table-column prop="C22" label="C22" />
+              </el-table>
+            </el-col>
+            <el-col :span="12">
+              <el-table :data="juzhen3_3" style="width: 100%">
+                <el-table-column prop="B8" label="B8" />
+                <el-table-column prop="C23" label="C23" />
+                <el-table-column prop="C24" label="C24" />
+                <el-table-column prop="C25" label="C25" />
+              </el-table>
+            </el-col>
+            <el-col :span="10">
+              <el-table :data="juzhen3_4" style="width: 100%">
+                <el-table-column prop="B9" label="B9" />
+                <el-table-column prop="C26" label="C26" />
+                <el-table-column prop="C27" label="C27" />
+              </el-table>
+            </el-col>
+          </el-row>
+          <el-row>
+            <el-col :span="12">
+              <el-table :data="juzhen4_1" style="width: 100%">
+                <el-table-column prop="A4" label="A4" />
+                <el-table-column prop="B10" label="B10" />
+                <el-table-column prop="B11" label="B11" />
+                <el-table-column prop="B12" label="B12" />
+              </el-table>
+            </el-col>
+            <el-col :span="12">
+              <el-table :data="juzhen4_2" style="width: 100%">
+                <el-table-column prop="B10" label="B10" />
+                <el-table-column prop="C28" label="C28" />
+                <el-table-column prop="C29" label="C29" />
+              </el-table>
+            </el-col>
+            <el-col :span="12">
+              <el-table :data="juzhen4_3" style="width: 100%">
+                <el-table-column prop="B11" label="B11" />
+                <el-table-column prop="C30" label="C30" />
+                <el-table-column prop="C31" label="C31" />
+              </el-table>
+            </el-col>
+            <el-col :span="12">
+              <el-table :data="juzhen4_4" style="width: 100%">
+                <el-table-column prop="B12" label="B12" />
+                <el-table-column prop="C32" label="C32" />
+                <el-table-column prop="C33" label="C33" />
+              </el-table>
+            </el-col>
+          </el-row>
         </div>
-      </div>
-  </div>
+        <div style="width:50%;margin-left:2%;height:88vh">
+          <div class="title">村庄发展潜能评价表</div>
+          <div class="table">
+            <el-table :data="tableData" :span-method="objectSpanMethod" border class="eleTable" max-height="600" style="width: 85%">
+              <el-table-column prop="decisionAims" label="决策目标" width="150"> </el-table-column>
+              <el-table-column prop="criterionLayer1" label="准则层1" width="130"> </el-table-column>
+              <el-table-column prop="weight1" label="权重"> </el-table-column>
+              <el-table-column prop="criterionLayer2" label="准则层2"> </el-table-column>
+              <el-table-column prop="weight2" label="权重"> </el-table-column>
+            </el-table>
+          </div>
+        </div>
+    </div>
+    </div>
+
 </template>
 
 <script lang="ts" setup>
@@ -539,7 +543,38 @@ const juzhen4_4 = [
 </script>
 
 <style lang="scss" scoped>
-.container {
+div.statTab-container {
+    position: absolute;
+    left: 12vw;
+    top: 8vh;
+    padding: 0;
+    margin: 0;
+    width: 88vw;
+    height: 92vh;
+    // background-color: rgb(85, 255, 0);
+    // background-image: url('../assets/farmer-bg.jpg');
+    background-image: linear-gradient(
+        to bottom,
+        rgba(50, 50, 50, 0.2) 0%,
+        rgba(50, 50, 50, 0.2) 100%
+      ),
+      url('../../assets/farmer-bg.jpg');
+    //   url('../assets/rice-field.jpg');
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div.main-container{
+    position: absolute;
+    left: 12vw;
+    top: 8vh;
+    padding: 0;
+    margin: 0;
+    width: 88vw;
+    height: 92vh;
+    z-index: 999;
+    .container {
   display:flex;
   justify-content: center;
   .title {
@@ -658,4 +693,6 @@ const juzhen4_4 = [
     background: rgba(127, 127, 127,0.5);
   }
 }
+}
+
 </style>
