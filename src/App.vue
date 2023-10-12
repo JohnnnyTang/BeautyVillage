@@ -37,24 +37,24 @@
           <div class="menu-item-icon road"></div>
           <span class="menu-item-text">建设路径</span>
         </template>
-        <el-menu-item index="3-1" @click="routeStat">
+        <el-menu-item index="3-1" @click="routeIndustry">
           <!-- <div class="menu-item-icon one"></div> -->
           <span class="menu-item-text">产业主导</span>
         </el-menu-item>
-        <el-menu-item index="3-2" @click="routeStat">
+        <el-menu-item index="3-2" @click="routeNature">
           <!-- <div class="menu-item-icon one"></div> -->
           <span class="menu-item-text">绿色发展</span>
         </el-menu-item>
-        <el-menu-item index="3-3" @click="routeStat">
+        <el-menu-item index="3-3" @click="routeCulture">
           <!-- <div class="menu-item-icon one"></div> -->
           <span class="menu-item-text">文化传承</span>
         </el-menu-item>
-        <el-menu-item index="3-4" @click="routeStat">
+        <el-menu-item index="3-4" @click="routeAdminister">
           <!-- <div class="menu-item-icon one"></div> -->
           <span class="menu-item-text">特色治理</span>
         </el-menu-item>
       </el-sub-menu>
-      <el-menu-item index="4" @click="routeStat">
+      <el-menu-item index="4" @click="routePassword">
         <div class="menu-item-icon key"></div>
         <span class="menu-item-text">建设密码</span>
       </el-menu-item>
@@ -89,6 +89,21 @@ const routeStat = (e:any) => {
   else{
     router.push('/stat')
   }
+}
+const routeIndustry = () => {
+  router.push('/industry')
+}
+const routeNature = () => {
+  router.push('/nature')
+}
+const routeCulture = () => {
+  router.push('/culture')
+}
+const routeAdminister = () => {
+  router.push('/administer')
+}
+const routePassword = () => {
+  router.push('/password')
 }
 //解决ResizeObserver loop completed with undelivered notifications
 const debounce = (callback: (...args: any[]) => void, delay: number) => {
