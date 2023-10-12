@@ -73,10 +73,44 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-const routeStat = () => {
-  router.push('/stat')
-}
+const routeStat = (e) => {
+  const routerIndex = e.index
+  if(routerIndex == '2-1'){
+    router.push('/potential')
+  }
+  else if(routerIndex == '2-2'){
+    router.push('/effect')
+  }
+  else if(routerIndex == '2-3'){
+    router.push('/target')
+  }
+  else if(routerIndex == '2-4'){
+    router.push('/scoreTable')
+  }
+  else{
+    router.push('/stat')
+  }
 
+}
+//解决ResizeObserver loop completed with undelivered notifications
+const debounce = (callback: (...args: any[]) => void, delay: number) => {
+    let tid: any;
+    return function (...args: any[]) {
+      const ctx = self;
+      tid && clearTimeout(tid);
+      tid = setTimeout(() => {
+        callback.apply(ctx, args);
+      }, delay);
+    };
+  };
+
+const _ = (window as any).ResizeObserver;
+(window as any).ResizeObserver = class ResizeObserver extends _ {
+  constructor(callback: (...args: any[]) => void) {
+    callback = debounce(callback, 20);
+    super(callback);
+  }
+};
 const defaultOpen = ref(['2', '3']);
 
 </script>

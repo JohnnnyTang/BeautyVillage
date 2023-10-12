@@ -1,5 +1,8 @@
 <template>
     <div class="statTab-container"></div>
+    <div class="main-container">
+        <router-view/>
+    </div>
 </template>
   
 <script lang="ts" setup>
@@ -7,7 +10,7 @@
 
 </script>
   
-<style lang="scss">
+<style lang="scss" scoped>
 div.statTab-container {
     position: absolute;
     left: 12vw;
@@ -29,6 +32,16 @@ div.statTab-container {
     -webkit-filter: blur(4px);
     background-size: cover;
     background-repeat: no-repeat;
+}
+div.main-container{
+    position: absolute;
+    left: 12vw;
+    top: 8vh;
+    padding: 0;
+    margin: 0;
+    width: 88vw;
+    height: 92vh;
+    z-index: 999;
 }
 </style>
   

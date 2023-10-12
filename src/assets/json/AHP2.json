@@ -1,0 +1,233 @@
+[
+  {
+    "decisionAims": "产业主导发展潜力A1",
+    "criterionLayer1": "特色性B1",
+    "weight1": 0.3,
+    "criterionLayer2": "主导产业特色性C1",
+    "weight2": 0.667
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "品牌价值性C2",
+    "weight2": 0.333
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "专业性B2",
+    "weight1": 0.3,
+    "criterionLayer2": "规模化经营程度C3",
+    "weight2": 0.515
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "三产融合度C4",
+    "weight2": 0.237
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "从业人员专业化C5",
+    "weight2": 0.247
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "收益性B3",
+    "weight1": 0.4,
+    "criterionLayer2": "农民增收量C6",
+    "weight2": 0.375
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "村集体收入增幅C7",
+    "weight2": 0.375
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "投资吸引力C8",
+    "weight2": 0.25
+  },
+  {
+    "decisionAims": "绿色发展发展潜力A2",
+    "criterionLayer1": "景观性B4",
+    "weight1": 0.167,
+    "criterionLayer2": "田园风光景观性C9",
+    "weight2": 0.5
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "水体景观性C10",
+    "weight2": 0.5
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "生态性B5",
+    "weight1": 0.292,
+    "criterionLayer2": "农用废料处理情况C11",
+    "weight2": 0.286
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "垃圾处理情况C12",
+    "weight2": 0.286
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "污水处理情况C13",
+    "weight2": 0.429
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "宜居性B6",
+    "weight1": 0.542,
+    "criterionLayer2": "无害化户厕普及程度C14",
+    "weight2": 0.154
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "雨水排放体系建设C15",
+    "weight2": 0.154
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "自来水入户情况C16",
+    "weight2": 0.154
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "电网铺设情况C17",
+    "weight2": 0.154
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "路网建设情况C18",
+    "weight2": 0.214
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "公共服务设施可达性C19",
+    "weight2": 0.166
+  },
+  {
+    "decisionAims": "文化传承发展潜力A3",
+    "criterionLayer1": "特色性B7",
+    "weight1": 0.432,
+    "criterionLayer2": "乡土景观特色性C20",
+    "weight2": 0.333
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "乡土景观地域性C21",
+    "weight2": 0.333
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "乡土景观与城市公园同质化C22",
+    "weight2": 0.333
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "整体性B8",
+    "weight1": 0.276,
+    "criterionLayer2": "建筑一体化C23",
+    "weight2": 0.286
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "乡土景观自然性C24",
+    "weight2": 0.286
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "风貌统一度C25",
+    "weight2": 0.429
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "传承性B9",
+    "weight1": 0.292,
+    "criterionLayer2": "文化传承塑造C26",
+    "weight2": 0.4
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "传统（非）物质文化保留度C27",
+    "weight2": 0.6
+  },
+  {
+    "decisionAims": "共建共治发展潜力A4",
+    "criterionLayer1": "公众性B10",
+    "weight1": 0.417,
+    "criterionLayer2": "民意采纳程度C28",
+    "weight2": 0.4
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "村民参与度C29",
+    "weight2": 0.6
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "活动性B11",
+    "weight1": 0.333,
+    "criterionLayer2": "文体活动开展情况C30",
+    "weight2": 0.5
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "教育宣传开展情况C31",
+    "weight2": 0.5
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "文明性B12",
+    "weight1": 0.25,
+    "criterionLayer2": "乡风文明程度C32",
+    "weight2": 0.667
+  },
+  {
+    "decisionAims": "",
+    "criterionLayer1": "",
+    "weight1": "",
+    "criterionLayer2": "村史保留完整度C33",
+    "weight2": 0.333
+  }
+]

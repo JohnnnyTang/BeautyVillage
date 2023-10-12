@@ -1,0 +1,67 @@
+[
+  {
+    "elementLayer": "产业主导评价指标",
+    "factorLayer": "主导产业特色性",
+    "indicatorSpecification": "指依附于区域内自然资源、历史传统而发展起来的具有特色性的农业，包括产品特色、生产方式特色等"
+  },
+  {
+    "elementLayer": "",
+    "factorLayer": "产品丰富度",
+    "indicatorSpecification": "指产品及其上下游产业的种类和数量"
+  },
+  {
+    "elementLayer": "",
+    "factorLayer": "产品品质化",
+    "indicatorSpecification": "指农产品质量、品牌知名度，即“三品一标”化程度"
+  },
+  {
+    "elementLayer": "绿色发展评价指标",
+    "factorLayer": "景观性",
+    "indicatorSpecification": "指田园作物色彩、肌理、斑块、规模、序列等视觉感受"
+  },
+  {
+    "elementLayer": "",
+    "factorLayer": "特色性",
+    "indicatorSpecification": "指建筑风貌、格局形态等方面具有较强的地域特色"
+  },
+  {
+    "elementLayer": "",
+    "factorLayer": "地形地貌丰富度",
+    "indicatorSpecification": "指乡村区域内山地、水体、冲田等地理特征资源的丰富程度"
+  },
+  {
+    "elementLayer": "文化传承评价指标",
+    "factorLayer": "独特性",
+    "indicatorSpecification": "指在风俗活动、传统技艺、历史事件及名人、生活习惯等方面具有较强地域特色"
+  },
+  {
+    "elementLayer": "",
+    "factorLayer": "历史古迹完整性",
+    "indicatorSpecification": "指乡村遗留下来的古构筑物、古树、遗迹等保护、维修、整治情况"
+  },
+  {
+    "elementLayer": "",
+    "factorLayer": "传承与发展",
+    "indicatorSpecification": "指乡村文化活动、民俗工艺等非物质文化的传承及创新情况"
+  },
+  {
+    "elementLayer": "",
+    "factorLayer": "类型与数量",
+    "indicatorSpecification": "指乡村非物质文化的类型和总体数量"
+  },
+  {
+    "elementLayer": "特色治理评价指标",
+    "factorLayer": "基层自治特色性",
+    "indicatorSpecification": "指基层自治体系，村委、村民治理能力较为完整且有一定特色"
+  },
+  {
+    "elementLayer": "",
+    "factorLayer": "村民公共事务参与度",
+    "indicatorSpecification": "指乡村基层群众自治的开展程度"
+  },
+  {
+    "elementLayer": "",
+    "factorLayer": "建设力量多元性",
+    "indicatorSpecification": "指建设村庄的村民、企业、城市等多方合作程度"
+  }
+]
