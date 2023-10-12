@@ -1,6 +1,7 @@
 //从下载的vue-router中导入createRouter
 import { createRouter, createWebHistory, createWebHashHistory } from "vue-router"
 import statTab from '../components/StatTab.vue';
+import visitCountyTab from '../components/visitCountyTab.vue';
 // import About from "@/components/About.vue"
 //配置映射关系
 const routes = [
@@ -14,6 +15,9 @@ const routes = [
         path: "/stat",
         name: "statTab",
         component: statTab,
+        meta: {
+            keepAlive: true
+        },
     },
     {
         path: "/potential",
@@ -35,7 +39,11 @@ const routes = [
         name: "scoreTable",
         component: () => import('../components/targetSystem/scoreTable.vue')
     },
-
+    {
+        path: "/visited/:countyName",
+        name: "visitCountyTab",
+        component: visitCountyTab
+    },
 ]
 
 //创建路由对象
