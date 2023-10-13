@@ -109,7 +109,7 @@ const routes = [
 //创建路由对象
 const router = createRouter({
     routes,
-    history: createWebHistory()
+    history: createWebHashHistory()
 })
 
 export default router

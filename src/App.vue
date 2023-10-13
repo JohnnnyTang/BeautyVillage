@@ -232,7 +232,7 @@ div.verticle-nav {
   margin: 0;
 
   ul.el-menu {
-    background-color: rgba(17, 17, 17, 0.5);
+    background-color: rgba(15, 46, 0, 0.5);
     backdrop-filter: blur(2px);
     border-radius: 6px;
   }
